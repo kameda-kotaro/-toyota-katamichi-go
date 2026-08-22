@@ -27,6 +27,9 @@ jobs:
       - name: Check Toyota Katamichi GO
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          FILTER_START: ${{ vars.FILTER_START }}
+          FILTER_RETURN: ${{ vars.FILTER_RETURN }}
+          FILTER_CAR: ${{ vars.FILTER_CAR }}
         run: python monitor.py
 
       - name: Save state
